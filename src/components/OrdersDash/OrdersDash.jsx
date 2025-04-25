@@ -1,23 +1,20 @@
 import React from "react";
 import Cards from "../Cards/Cards";
 import Table from "../Table/Table";
-import "./MainDash.css";
+import "./OrdersDash.css";
 import RightSide from "../RightSide/RightSide";
 
-const MainDash = () => {
+const OrdersDash = () => {
   return (
-    <div className="MainDash">
+    <div className="OrdersDash">
       <div className="mainContent">
-        <h2>Dashboard</h2>
+        <h2>Orders</h2>
         <Cards />
         <Table />
-      </div>
-      <div className="rightContent">
-        <RightSide />
       </div>
     </div>
 
   );
 };
 
-export default MainDash;
+export default OrdersDash;

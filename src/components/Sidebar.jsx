@@ -5,9 +5,12 @@ import { UilSignOutAlt } from "@iconscout/react-unicons";
 import { SidebarData } from "../Data/Data";
 import { UilBars } from "@iconscout/react-unicons";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const [selected, setSelected] = useState(0);
+  const navigate = useNavigate();
+
 
   const [expanded, setExpaned] = useState(true)
 
@@ -42,17 +45,19 @@ const Sidebar = () => {
             <div
               className={selected === index ? "menuItem active" : "menuItem"}
               key={index}
-              onClick={() => setSelected(index)}
+              onClick={() => {
+                setSelected(index);
+                
+                const heading = item.heading.toLowerCase();
+                if (heading === "dashboard") navigate("/");
+                else navigate(`/${heading}`);
+              }}              
             >
               <item.icon />
               <span>{item.heading}</span>
             </div>
           );
         })}
-        {/* signoutIcon */}
-        <div className="menuItem">
-          <UilSignOutAlt />
-        </div>
       </div>
     </motion.div>
     </>

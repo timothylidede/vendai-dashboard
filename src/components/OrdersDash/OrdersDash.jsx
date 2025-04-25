@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../Cards/Cards";
+import OrdersCards from "../OrdersCards/OrdersCards";
 import Table from "../Table/Table";
 import "./OrdersDash.css";
 import RightSide from "../RightSide/RightSide";
@@ -9,7 +9,7 @@ const OrdersDash = () => {
     <div className="OrdersDash">
       <div className="mainContent">
         <h2>Orders</h2>
-        <Cards />
+        <OrdersCards />
         <Table />
       </div>
     </div>

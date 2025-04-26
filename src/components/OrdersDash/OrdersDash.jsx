@@ -1,16 +1,17 @@
 import React from "react";
-import OrdersCards from "../OrdersCards/OrdersCards";
-import Table from "../Table/Table";
+import OrdersTable from "../OrdersTable/OrdersTable";
 import "./OrdersDash.css";
-import RightSide from "../RightSide/RightSide";
+import OrdersRightSide from "../OrdersRightSide/OrdersRightSide";
 
 const OrdersDash = () => {
   return (
     <div className="OrdersDash">
-      <div className="mainContent">
+      <div className="ordersMainContent">
         <h2>Orders</h2>
-        <OrdersCards />
-        <Table />
+        <OrdersTable />
+      </div>
+      <div className="ordersRightContent">
+        <OrdersRightSide />
       </div>
     </div>
 

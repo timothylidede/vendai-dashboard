@@ -1,24 +1,23 @@
-.Cards {
-    display: flex;
-    gap: 10px;
+.OrdersCards {
+  display: flex;
+  flex-direction: column; /* <--- stack vertically */
+  gap: 10px;
+  width: 100%;
+}
+
+.parentContainer {
+  width: 100%;
+}
+
+/* You can now REMOVE flex-direction from the media query */
+@media screen and (max-width: 1200px) {
+  .parentContainer {
+    height: 9rem;
   }
-  .parentContainer{
-    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .OrdersCards {
+    width: 90%;
   }
-  
-  @media screen and (max-width: 1200px) {
-    .Cards{
-      flex-direction: column;
-    }
-    .parentContainer{
-      height: 9rem;
-    }
-  }
-  
-  @media screen and (max-width: 768px)
-  {
-    .Cards{
-      width: 90%;
-    }
-  }
-  
+}

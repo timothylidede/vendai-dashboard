@@ -6,7 +6,7 @@ import OrdersCard from "../OrdersCard/OrdersCard";
 
 const Cards = () => {
   return (
-    <div className="Cards">
+    <div className="OrdersCards">
       {cardsData.map((card, id) => {
         return (
           <div className="parentContainer" key={id}>

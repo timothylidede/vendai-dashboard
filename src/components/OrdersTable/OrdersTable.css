@@ -13,13 +13,54 @@
   
   .Table {
     border-radius: 0.7rem !important;
-    margin-bottom: 2rem; /* <<< bottom margin */
-    max-height: 500px; /* <<< limit the height */
-    overflow-y: auto; /* <<< make table scrollable vertically */
-    overflow-x: auto; /* <<< also scroll horizontally on small screens */
+    margin-bottom: 2rem;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: auto;
     background: white;
     padding: 1rem;
     box-shadow: 0px 13px 20px 0px #80808029;
+  }
+  
+  /* Filter container styling */
+  .filterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  
+  .searchField {
+    min-width: 250px;
+    flex-grow: 1;
+  }
+  
+  .statusFilter {
+    min-width: 120px;
+  }
+  
+  .clearButton {
+    color: #f44336;
+    text-transform: none;
+  }
+  
+  .resultCount {
+    margin-left: auto;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* Sortable header styling */
+  .sortableHeader {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sortableHeader:hover {
+    background-color: rgba(0, 0, 0, 0.04);
   }
   
   /* The status badge */
@@ -42,6 +83,16 @@
       width: 100%;
       margin-top: 2rem;
     }
+    
+    .filterContainer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .resultCount {
+      margin-left: 0;
+      margin-top: 8px;
+    }
   }
   
   @media screen and (max-width: 768px) {
@@ -53,4 +104,3 @@
       align-items: center;
     }
   }
-  

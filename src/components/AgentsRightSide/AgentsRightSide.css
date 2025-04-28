@@ -1,0 +1,30 @@
+.AgentsRightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 300px; /* Keeps the width fixed */
+    padding: 1rem;
+  }
+  
+  /* For smaller screens: make sure RightSide takes full width */
+  @media screen and (max-width: 1200px) {
+    .AgentsRightSide {
+      max-width: none;
+      width: 100%;
+      margin-top: 3rem; /* Space from top */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .AgentsRightSide {
+      width: 100%;
+      margin-top: 0;
+    }
+    .AgentsRightSide > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

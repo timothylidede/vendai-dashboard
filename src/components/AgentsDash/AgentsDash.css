@@ -1,0 +1,21 @@
+.AgentsDash {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  /* Left side (Cards + Table) stacked vertically */
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 3; /* Makes it take more space */
+  }
+  
+  /* Right side should be a fixed size */
+  .rightContent {
+    flex: 1;
+    width: 300px; /* or whatever fixed width you prefer */
+  }
+  

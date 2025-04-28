@@ -1,106 +1,114 @@
-.CompactCard {
-    display: flex;
-    flex: 1;
-    height: 7rem !important;
-    border-radius: 0.7rem;
-    color: white;
-    padding: 1rem;
-    position: relative;
-    cursor: pointer;
+.OrderCompactCard {
+  display: flex;
+  flex: 1;
+  height: 7rem !important;
+  border-radius: 0.7rem;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.OrderCompactCard:hover {
+  box-shadow: none !important;
+}
+
+/* radial bar */
+.orderRadialBar {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.CircularProgressbar {
+  width: 4rem !important;
+  overflow: visible;
+}
+
+.CircularProgressbar-path {
+  stroke: white !important;
+  stroke-width: 12px !important;
+  filter: drop-shadow(2px 4px 6px white);
+}
+
+.CircularProgressbar-trail {
+  display: none;
+}
+
+.CircularProgressbar-text {
+  fill: white !important;
+}
+
+.orderRadialBar > span {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* detail section */
+.orderDetail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.orderDetail > span:nth-child(2) {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.orderDetail > span:nth-child(3) {
+  font-size: 12px;
+}
+
+/* Expanded Card Overlay */
+.OrderExpandedCardOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Expanded Card itself centered */
+.OrderExpandedCard {
+  width: 90%;
+  max-width: 600px;
+  height: 70vh;
+  background: var(--cardBackground); /* optional */
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.orderChartContainer {
+  width: 100%;
+  height: 300px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .OrderExpandedCard {
+    height: 60vh;
   }
-  .CompactCard:hover {
-    box-shadow: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .OrderExpandedCard {
+    width: 80%;
+    height: 55vh;
   }
-  
-  /* radial bar */
-  .radialBar {
-    flex: 1 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 1rem;
-  }
-  .CircularProgressbar {
-    width: 4rem !important;
-    overflow: visible;
-  }
-  .CircularProgressbar-path {
-    stroke: white !important;
-    stroke-width: 12px !important;
-    filter: drop-shadow(2px 4px 6px white);
-  }
-  .CircularProgressbar-trail {
-    display: none;
-  }
-  .CircularProgressbar-text {
-    fill: white !important;
-  }
-  
-  .radialBar > span {
-    font-size: 17px;
-    font-weight: bold;
-  }
-  
-  /* sideDetail*/
-  .detail {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  
-  .detail > span:nth-child(2) {
-    font-size: 22px;
-    font-weight: bold;
-  }
-  .detail > span:nth-child(3) {
-    font-size: 12px;
-  }
-  
-  /* ExpandedCard */
-  .ExpandedCard {
-    position: absolute;
-    width: 60%;
-    height: 70vh;
-    z-index: 9;
-    left: 13rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1rem;
-  }
-  .ExpandedCard > span:nth-of-type(1) {
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    text-shadow: 0px 0px 15px white;
-  }
-  .ExpandedCard > span:nth-of-type(2) {
-    color: rgb(236, 236, 236);
-    font-size: 15px;
-  }
-  
-  .chartContainer {
-    width: 70%;
-  }
-  
-  @media screen and (max-width: 1200px) {
-    .ExpandedCard {
-      top: 2rem;
-      height: 45vh;
-      left: 6rem;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .ExpandedCard {
-      top: 8rem;
-      height: 50%;
-      left: 25px;
-      width: 80%;
-    }
-  }
-  
+}

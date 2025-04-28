@@ -1,7 +1,7 @@
 import React from "react";
-import CustomerReview from "../CustomerReview/CustomerReview";
 import Updates from "../Updates/Updates";
 import "./RightSide.css";
+import TopAgentsLeaderboard from "../TopAgentsLeaderboard/TopAgentsLeaderboard";
 
 const RightSide = () => {
   return (
@@ -12,7 +12,7 @@ const RightSide = () => {
       </div>
       <div>
         <h3>Agents Leaderboard</h3>
-        <CustomerReview />
+        <TopAgentsLeaderboard />
       </div>
     </div>
   );
